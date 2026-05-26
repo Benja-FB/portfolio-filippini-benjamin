@@ -1,0 +1,33 @@
+---
+import ProjectCard from "./Projectcard.astro";
+---
+
+<section class="py-32 px-6">
+
+  <div class="max-w-6xl mx-auto">
+
+    <p class="text-purple-400 mb-4">
+      Proyectos
+    </p>
+
+    <h2 class="text-5xl font-bold mb-16">
+      Algunos trabajos recientes.
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <ProjectCard
+        title="Proyecto de Negocios"
+        description="Aplicación para ver los productos locales de los negocios."
+      />
+
+      <ProjectCard
+        title="Proyecto de Delivery"
+        description="Aplicación para contratar servicios de delivery."
+      />
+
+    </div>
+
+  </div>
+
+</section>
