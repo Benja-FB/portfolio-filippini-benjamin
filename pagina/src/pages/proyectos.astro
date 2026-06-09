@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Projects from "../components/Projects.astro";
+import '../styles/global.css'
+import Projectcard from "../components/Projectcard.astro";
+const { title } = Astro.props;
+const { description } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+  </head>
+
+  <body class="bg-zinc-950 text-white overflow-x-hidden">
+    <slot />
+  </body>
+</html>
+
+<Layout title="Proyectos">
+
+<Navbar />
+    <section class="min-h-screen flex items-center justify-center">
+      <div class="text-center">
+        <h1 class="text-6xl font-bold mb-4">
+          Proyectos
+        </h1>
+      </div>
+    </section>
+<Projectcard
+        src = "/public/negocio.ico"
+        title="Proyecto de Negocios"
+        description="Aplicación para ver los productos locales de los negocios."
+      />
+      <Projectcard
+        src = "/public/delivery.ico"
+        title="Proyecto de Delivery"
+        description="Aplicación para contratar servicios de delivery."
+      />
