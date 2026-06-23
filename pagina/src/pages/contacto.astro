@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import ContactCard from "../components/ContactCard.astro";
+---
+
+<Layout title="Contacto">
+
+  <Navbar />
+
+  <section class="min-h-[50vh] flex items-center justify-center">
+    <h1 class="text-5xl md:text-6xl font-bold text-center">
+      Contactos
+    </h1>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-4 pb-20 grid gap-6">
+
+    <ContactCard
+      src="/whatsapp.png"
+      title="WhatsApp"
+      description="Hablame directamente por WhatsApp"
+      link="https://wa.me/542475407723"
+    />
+
+    <ContactCard
+      src="/gmail.png"
+      title="Email"
+      description="Enviame un correo"
+      link="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWrRnXmnkfpdFjrFdwkHhQGHHHkMkckXjTjclfrTsnCHPjjSqQbxDPdhdgXsJbWqGJjSzJfqv"
+    />
+
+    <ContactCard
+      src="/facebook.png"
+      title="Facebook"
+      description="Seguime en Facebook"
+      link="https://facebook.com/benjamin.filippini.77"
+    />
+
+  </section>
+
+</Layout>
