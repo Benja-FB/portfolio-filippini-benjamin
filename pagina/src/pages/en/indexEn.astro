@@ -1,35 +1,35 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
-import About from "../components/About.astro";
-import Projects from "../components/Projects.astro";
-import Footer from "../components/Footer.astro";
+import Layout from "../../layouts/Layout.astro";
+import NavbarEn from "../../components/en/NavbarEn.astro";
+import AboutEn from "../../components/en/AboutEn.astro";
+import ProjectsEn from "../../components/en/ProjectsEn.astro";
+import FooterEn from "../../components/en/FooterEn.astro";
 ---
 
 <Layout title="Mi Portfolio">
 
-<Navbar />
+<NavbarEn />
   <section class="min-h-screen flex items-center justify-center">
     <div class="text-center">
 
       <h1 class="text-6xl font-bold mb-4">
-        Hola, soy Benja 👋
+        Hi, I'm Benja 👋
       </h1>
 
       <p class="text-zinc-400 text-xl">
-        Desarrollador de Software
+        Software Developer
       </p>
 
     </div>
   </section>
-<About />
+<AboutEn />
 
-<Projects />
-  <div class="max-w-5xl mx-auto px-6">
-    <a href="/proyectos" class="mt-8 bg-white text-black px-6 py-3 rounded-xl font-bold hover:scale-105 transition">
-      Ver mas detalles
-    </a>
-  </div>
+<ProjectsEn />
+    <div class="max-w-5xl mx-auto px-6">
+      <a href="/en/proyectosEn" class="mt-8 bg-white text-black px-6 py-3 rounded-xl font-bold hover:scale-105 transition">
+        View more details
+      </a>
+    </div>
 
   <section class="min-h-screen flex items-center px-6">
     <section class="relative min-h-screen flex items-center px-6"></section>
@@ -41,21 +41,21 @@ import Footer from "../components/Footer.astro";
       </p>
 
       <h1 class="text-6xl md:text-8xl font-black leading-none mb-6">
-        Creo experiencias digitales modernas.
+        I create modern digital experiences.
       </h1>
 
       <p class="text-zinc-400 text-xl max-w-2xl">
-        Desarrollo aplicaciones web modernas enfocadas en diseño,
-        performance y experiencia de usuario.
+        I develop modern web applications focused on design,
+        performance and user experience.
       </p>
 
       <button class="mt-8 bg-white text-black px-6 py-3 rounded-xl font-bold hover:scale-105 transition">
-        Contacto
-        <a href="/contacto" class="absolute inset-0"></a>
+        Contact
+        <a href="/en/contactoEn" class="absolute inset-0"></a>
       </button>
 
     </div>
 
   </section>
-<Footer />
+<FooterEn />
 </Layout>

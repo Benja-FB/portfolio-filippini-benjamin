@@ -1,0 +1,40 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import NavbarEn from "../../components/en/NavbarEn.astro";
+import ProjectCardEn from "../../components/en/ProjectCardEn.astro";
+import FooterEn from "../../components/en/FooterEn.astro";
+---
+
+<Layout title="Projects">
+
+  <NavbarEn />
+
+  <section class="min-h-[60vh] flex items-center justify-center">
+    <h1 class="text-5xl md:text-6xl font-bold text-center">
+      My Projects
+    </h1>
+  </section>
+
+  <section class="max-w-5xl mx-auto px-4 pb-20 grid gap-6">
+
+    <ProjectCardEn
+      src="/negocio.ico"
+      title="Business Project"
+      github="https://github.com/e156089/JavaCrudApp-Negocio.git"
+      description="This mobile application is an integrated platform that connects all businesses in a locality with their customers.
+       On one hand, businesses register, publish their products, manage inventory and receive orders.
+        On the other hand, customers access a unified catalog of all affiliated companies, purchase products and rate the business.
+         All in one application, with different interfaces depending on the user's role. The objective is to centralize local commerce, facilitate sales for small businesses and offer convenience to customers."
+    />
+
+    <ProjectCardEn
+      src="/delivery.ico"
+      title="Delivery Project"
+      github="https://github.com/e156089/JavaCrudApp-Delivery.git"
+      description="This mobile application is intended exclusively for people looking to work as a delivery person or who want to request one's service. It allows logistics operators to register, activate their availability window in real time, receive direct order assignments from participating customers or merchants (who operate with the first application), accept or reject requests, compulsorily trace the physical stages of delivery through cross-validation by 4-digit tokens, audit your accumulated earnings and visualize your reputation. The primary objective is to efficiently structure last mile logistics, mitigate operational friction and boost local employment."
+    />
+
+  </section>
+
+</Layout>
+<FooterEn />

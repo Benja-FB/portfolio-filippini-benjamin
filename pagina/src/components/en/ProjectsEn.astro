@@ -1,0 +1,33 @@
+---
+import ProjectCardEn from "../../components/en/ProjectCardEn.astro";
+---
+
+<section class="py-10 px-6">
+
+  <div class="max-w-5xl mx-auto px-6">
+
+    <p class="text-purple-400 mb-4">
+      Projects
+    </p>
+
+    <h2 class="text-5xl font-bold mb-16">
+      Some recent projects.
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <ProjectCardEn
+        src = "/public/negocio.ico"
+        title="Business Project"
+        description="Application to view local products from businesses."
+      />
+
+      <ProjectCardEn
+        src = "/public/delivery.ico"
+        title="Delivery Project"
+        description="Application to hire delivery services."
+      />
+
+    </div>
+  </div>
+</section>

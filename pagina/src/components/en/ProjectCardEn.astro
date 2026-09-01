@@ -1,0 +1,26 @@
+---
+const { src, title, description, tech = [], github, demo } = Astro.props;
+---
+
+<div class="flex gap-5 p-5 bg-zinc-900/60 backdrop-blur rounded-2xl border border-zinc-800 hover:border-zinc-600 transition">
+
+  <img 
+    src={src} 
+    alt={title}
+    class="w-20 h-20 object-contain"
+  />
+
+  <div class="flex-1">
+
+    <h2 class="text-xl font-bold mb-1">
+      {title}
+    </h2>
+
+  <div class="flex gap-4 text-sm">
+    {github && <a href={github} target="_blank" rel="noopener noreferrer" class="text-blue-400 hover:underline">GitHub</a>}
+  </div>
+
+    <p class="text-gray-400 mb-3">
+      {description}
+    </p>
+</div>
