@@ -1,1 +1,53 @@
 @import "tailwindcss";
+
+html,
+body {
+	transition: background-color 200ms ease, color 200ms ease;
+}
+
+html.light body {
+	background-color: #ffffff;
+	color: #18181b;
+}
+
+html.light .bg-zinc-950 {
+	background-color: #ffffff;
+}
+
+html.light .bg-zinc-900\/60 {
+	background-color: rgba(244, 244, 245, 0.8);
+}
+
+html.light .bg-zinc-900 {
+	background-color: #f4f4f5;
+}
+
+html.light .text-white {
+	color: #18181b;
+}
+
+html.light .text-zinc-400 {
+	color: #52525b;
+}
+
+html.light .text-zinc-500 {
+	color: #71717a;
+}
+
+html.light .border-white\/10,
+html.light .border-zinc-800 {
+	border-color: #e4e4e7;
+}
+
+html.light .hover\:bg-zinc-800:hover {
+	background-color: #e4e4e7;
+}
+
+html.light .bg-white {
+	background-color: #18181b;
+	color: #ffffff;
+}
+
+html.light .theme-language-icon {
+	filter: brightness(0);
+}

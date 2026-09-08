@@ -5,36 +5,72 @@
       Portfolio
     </h2>
 
-    <div class="flex gap-6">
+    <div class="flex gap-6 items-center">
       <a href="/en/indexEn">Home</a>
       <a href="/en/proyectosEn">Projects</a>
       <a href="/en/contactoEn">Contact</a>
 
-      <details class="relative group">
-        <summary class="list-none cursor-pointer text-zinc-400 hover:text-white transition flex items-center gap-2">
-          <img
-            src="/traduccionlogo.png"
-            alt="Language Icon"
-            class="w-6 h-6"
-          />
-          <span class="text-xs">⌄</span>
-        </summary>
+    <details class="relative group">
+      <summary
+        class="list-none cursor-pointer p-2 rounded-lg hover:bg-zinc-800 transition flex items-center gap-1"
+        aria-label="Cambiar idioma"
+      >
+        <img
+          src="/traduccionlogo.png"
+          alt=""
+          class="theme-language-icon w-6 h-6"
+        />
+        <span class="text-xs transition-transform duration-200 group-open:rotate-180" aria-hidden="true">⌄</span>
+      </summary>
 
-        <div class="absolute top-full mt-3 right-0 bg-zinc-900 border border-zinc-800 rounded-lg p-2 min-w-32 shadow-xl">
-          <a
-            href="/"
-            class="block px-3 py-2 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-800 transition"
-          >
-            🇪🇸 Espanish
-          </a>
-          <a
-            href="/en/indexEn"
-            class="block px-3 py-2 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-800 transition"
-          >
-            🇺🇸 English
-          </a>
-        </div>
-      </details>
+      <div class="absolute top-full mt-3 right-0 bg-zinc-900 border border-zinc-800 rounded-lg p-2 min-w-32 shadow-xl">
+        <a
+          href="/"
+          class="block px-3 py-2 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-800 transition"
+        >
+          🇪🇸 Spanish
+        </a>
+        <a
+          href="/en/indexEn"
+          class="block px-3 py-2 rounded-md text-zinc-400 hover:text-white hover:bg-zinc-800 transition"
+        >
+          🇺🇸 English
+        </a>
+      </div>
+    </details>
+    <button
+      id="theme-toggle"
+      type="button"
+      class="p-2 rounded-lg hover:bg-zinc-800 transition"
+      aria-label="Cambiar tema"
+      >
+      🌙
+    </button>
     </div>
   </div>
 </nav>
+<script>
+  const themeToggle = document.getElementById("theme-toggle");
+
+  themeToggle?.addEventListener("click", () => {
+    document.documentElement.classList.toggle("light");
+
+    const isLight = document.documentElement.classList.contains("light");
+
+    localStorage.setItem("theme", isLight ? "light" : "dark");
+
+    if (themeToggle) {
+      themeToggle.textContent = isLight ? "☀️" : "🌙";
+    }
+  });
+
+  const savedTheme = localStorage.getItem("theme");
+
+  if (savedTheme === "light") {
+    document.documentElement.classList.add("light");
+
+    if (themeToggle) {
+      themeToggle.textContent = "☀️";
+    }
+  }
+</script>
