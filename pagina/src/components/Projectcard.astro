@@ -1,5 +1,5 @@
 ---
-const { src, title, description, tech = [], github, demo } = Astro.props;
+const { src, title, description, tech = [], github, demo, preview } = Astro.props;
 ---
 
 <div class="flex gap-5 p-5 bg-zinc-900/60 backdrop-blur rounded-2xl border border-zinc-800 hover:border-zinc-600 transition">
@@ -23,4 +23,9 @@ const { src, title, description, tech = [], github, demo } = Astro.props;
     <p class="text-gray-400 mb-3">
       {description}
     </p>
+
+    {preview && (
+      <img src={preview} alt={`Vista previa de ${title}`} class="w-full rounded-lg shadow-lg" />
+    )}
+
 </div>
