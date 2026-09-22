@@ -5,6 +5,51 @@ body {
 	transition: background-color 200ms ease, color 200ms ease;
 }
 
+body {
+	position: relative;
+	min-height: 100vh;
+	background-color: #09090b;
+	background-image:
+		linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+		linear-gradient(135deg, rgba(124, 58, 237, 0.12), transparent 35%, rgba(14, 165, 233, 0.08));
+	background-size: 48px 48px, 48px 48px, 100% 100%;
+}
+
+.page-hero {
+	position: relative;
+	isolation: isolate;
+}
+
+.page-hero::before {
+	content: "";
+	position: absolute;
+	inset: 18% 20%;
+	z-index: -1;
+	border: 1px solid rgba(255, 255, 255, 0.08);
+	border-radius: 2rem;
+	background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(14, 165, 233, 0.04));
+	box-shadow: 0 0 80px rgba(124, 58, 237, 0.08);
+}
+
+.page-hero h1 {
+	text-shadow: 0 0 32px rgba(167, 139, 250, 0.25);
+}
+
+html.light body {
+	background-color: #fafafa;
+	background-image:
+		linear-gradient(rgba(24, 24, 27, 0.04) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(24, 24, 27, 0.04) 1px, transparent 1px),
+		linear-gradient(135deg, rgba(124, 58, 237, 0.08), transparent 35%, rgba(14, 165, 233, 0.05));
+}
+
+html.light .page-hero::before {
+	border-color: rgba(24, 24, 27, 0.1);
+	background: linear-gradient(135deg, rgba(124, 58, 237, 0.08), rgba(14, 165, 233, 0.04));
+	box-shadow: 0 0 80px rgba(124, 58, 237, 0.08);
+}
+
 html.light body {
 	background-color: #ffffff;
 	color: #18181b;
